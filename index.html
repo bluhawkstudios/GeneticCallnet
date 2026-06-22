@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Genetic Callnet – Tailored Talent Solutions</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="logo"><img src="GCLogo-transparent.png" alt="Genetic Callnet" class="logo-img" /></a>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li class="nav-item" id="about-dropdown">
+          <button class="dropdown-toggle">About</button>
+          <div class="dropdown-menu">
+            <a href="about.html">About Us</a>
+            <a href="why-us.html">Why Genetic Callnet</a>
+            <a href="leadership.html">Leadership Team</a>
+          </div>
+        </li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="clients.html">Clients</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero hero--compact hero--centered">
+    <div class="hero-bg">
+      <div class="hero-circle c1"></div>
+      <div class="hero-circle c2"></div>
+      <div class="hero-circle c3"></div>
+    </div>
+    <div class="hero-content hero-content--centered">
+      <p class="hero-eyebrow">Since 2007 · Mumbai & Dubai</p>
+      <h1 class="hero-headline">
+        Building Stronger Businesses with<br/>
+        <em><span class="ai-accent">AI</span>-Powered Talent Solutions</em>
+      </h1>
+      <p class="hero-sub">20+ years of HR expertise delivering recruitment, RPO, contract staffing, and workforce solutions across India, UAE, and global markets.</p>
+      <div class="hero-search-wrap">
+        <div class="hero-search-box">
+          <span class="hero-search-icon">🔍</span>
+          <input type="text" class="hero-search-input" placeholder="Find Right Job For Me — enter role, skill, or location…" id="heroSearch" />
+          <button class="hero-search-btn" onclick="handleHeroSearch()">Search</button>
+        </div>
+        <p class="hero-search-hint">e.g. "Senior Finance Manager", "SAP Consultant Mumbai", "Marketing Director UAE"</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS MARQUEE -->
+  <div class="stats-marquee-wrap">
+    <div class="stats-marquee-track">
+      <!-- repeated twice for seamless loop -->
+      <div class="marquee-stat"><span class="marquee-num">20+</span><span class="marquee-label">Years of Expertise</span></div>
+      <div class="marquee-divider"></div>
+      <div class="marquee-stat"><span class="marquee-num">2</span><span class="marquee-label">Global Offices</span></div>
+      <div class="marquee-divider"></div>
+      <div class="marquee-stat"><span class="marquee-num">12+</span><span class="marquee-label">Industries Served</span></div>
+      <div class="marquee-divider"></div>
+      <div class="marquee-stat"><span class="marquee-num">65,887</span><span class="marquee-label">Positions Closed</span></div>
+      <div class="marquee-divider"></div>
+      <div class="marquee-stat"><span class="marquee-num">100+</span><span class="marquee-label">Clients Served</span></div>
+      <div class="marquee-divider"></div>
+      <!-- duplicate for seamless loop -->
+      <div class="marquee-stat"><span class="marquee-num">20+</span><span class="marquee-label">Years of Expertise</span></div>
+      <div class="marquee-divider"></div>
+      <div class="marquee-stat"><span class="marquee-num">2</span><span class="marquee-label">Global Offices</span></div>
+      <div class="marquee-divider"></div>
+      <div class="marquee-stat"><span class="marquee-num">12+</span><span class="marquee-label">Industries Served</span></div>
+      <div class="marquee-divider"></div>
+      <div class="marquee-stat"><span class="marquee-num">65,887</span><span class="marquee-label">Positions Closed</span></div>
+      <div class="marquee-divider"></div>
+      <div class="marquee-stat"><span class="marquee-num">100+</span><span class="marquee-label">Clients Served</span></div>
+      <div class="marquee-divider"></div>
+    </div>
+  </div>
+
+  <!-- INTRO -->
+  <section class="intro section">
+    <div class="container two-col">
+      <div class="intro-text">
+        <span class="tag">Our Philosophy</span>
+        <h2>People are the foundation of business growth</h2>
+        <p>At Genetic Callnet, we have partnered with organisations since 2007 to solve hiring challenges through strategic recruitment, workforce planning, and scalable HR solutions. With offices in Mumbai and Dubai, we help businesses attract, engage, and retain exceptional talent.</p>
+        <a href="about.html" class="link-arrow">Learn our story →</a>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">🏆</div>
+          <p>AI-enabled talent acquisition & market mapping</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🏆</div>
+          <p>Multi-location presence across India and UAE</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🏆</div>
+          <p>Specialized in Hiring Senior, Leadership & High-Impact Talent</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🏆</div>
+          <p>Deep expertise across Finance, IT, Manufacturing, Live Entertainment, and more</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES STRIP -->
+  <section class="services-strip section">
+    <div class="container">
+      <span class="tag">What We Do</span>
+      <h2>Comprehensive Recruitment & HR Solutions</h2>
+      <p class="section-sub">From specialised hiring to large-scale workforce management — designed for speed, flexibility, and precision.</p>
+      <div class="service-cards">
+        <a href="services.html" class="service-card">
+          <span class="sc-num">01</span>
+          <h3>Permanent Recruitment</h3>
+          <p>Culturally aligned professionals for long-term growth.</p>
+        </a>
+        <a href="services.html" class="service-card">
+          <span class="sc-num">02</span>
+          <h3>Recruitment Process Outsourcing (RPO)</h3>
+          <p>End-to-end hiring solutions that function as an extension of your HR team.</p>
+        </a>
+        <a href="services.html" class="service-card">
+          <span class="sc-num">03</span>
+          <h3>Executive Search</h3>
+          <p>Leadership hiring for business-critical roles.</p>
+        </a>
+        <a href="services.html" class="service-card">
+          <span class="sc-num">04</span>
+          <h3>Contract Staffing</h3>
+          <p>Flexible workforce for project-based needs.</p>
+        </a>
+        <a href="services.html" class="service-card">
+          <span class="sc-num">05</span>
+          <h3>Overseas Recruitment</h3>
+          <p>Cross-border talent for global expansion.</p>
+        </a>
+        <a href="services.html" class="service-card">
+          <span class="sc-num">06</span>
+          <h3>Payroll & Compliance</h3>
+          <p>Reliable processing for operational efficiency.</p>
+        </a>
+      </div>
+      <div class="center-link"><a href="services.html" class="btn btn-outline">View All Services</a></div>
+    </div>
+  </section>
+
+  <!-- BRANDS -->
+  <section class="brands section">
+    <div class="container">
+      <span class="tag">Trusted By</span>
+      <h2>Brands That Believe in Our Work</h2>
+      <div class="brands-logo-wrap">
+        <img src="clients-logos-v2.png" alt="Our Clients – First American, Ascenso, Si Fashion, Crane CCO, Bristlecone, Man Investments, Gleren Technologies, NJ Wealth, Yokohama, Expert Furniture, Sandip University, OKI, The Guardians, Mirae Asset, FundsIndia, Multiplex, LG FMCG, ANAROCK, Saregama, Mastertrust" class="brands-logo-img" />
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner">
+    <div class="container cta-inner">
+      <div>
+        <h2>Ready to build your dream team?</h2>
+        <p>Talk to our recruitment experts today.</p>
+      </div>
+      <a href="contact.html" class="btn btn-white">Talk to Our Recruitment Experts</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo logo-light"><img src="GCLogo-transparent.png" alt="Genetic Callnet" class="logo-img logo-img--footer" /></a>
+        <p>Bridging businesses and exceptional talent since 2007.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="why-us.html">Why Us</a></li>
+          <li><a href="leadership.html">Leadership</a></li>
+          <li><a href="clients.html">Clients</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Get in Touch</h4>
+        <p>🇮🇳 +91 98339 36564</p>
+        <p>🇦🇪 +971 58514 3889</p>
+        <p>✉️ unnati@geneticcallnet.com</p>
+        <p>🌐 www.geneticcallnet.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Genetic Callnet. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function handleHeroSearch() {
+      const val = document.getElementById('heroSearch').value.trim();
+      if (val) {
+        // Match the iSmartRecruit ATS widget's own filter format (spaces -> "00000")
+        const filterStr = val.replace(/ /g, '00000');
+        window.location.href = 'careers.html?filterPara=' + encodeURIComponent(filterStr);
+      } else {
+        window.location.href = 'careers.html';
+      }
+    }
+    document.getElementById('heroSearch').addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') handleHeroSearch();
+    });
+  </script>
+  <script src="main.js"></script>
+</body>
+</html>
