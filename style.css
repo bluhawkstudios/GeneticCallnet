@@ -219,7 +219,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   padding: 7rem 0 2.75rem;
   background:
     linear-gradient(90deg, rgba(255,255,255,.98) 0%, rgba(255,255,255,.91) 38%, rgba(247,246,240,.5) 65%, rgba(247,246,240,.12) 100%),
-    url('AI Recruiter.png') center center / cover no-repeat;
+    url('MumbaiDubai.png') center center / cover no-repeat;
 }
 .hero::before {
   position: absolute;
@@ -755,7 +755,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
     padding: 6.5rem 0 2.5rem;
     background:
       linear-gradient(90deg, rgba(255,255,255,.97) 0%, rgba(255,255,255,.88) 62%, rgba(247,246,240,.5) 100%),
-      url('AI Recruiter.png') 55% center / cover no-repeat;
+      url('MumbaiDubai.png') center center / cover no-repeat;
   }
   .hero::before { inset: 0; opacity: 1; }
   .hero-headline { font-size: clamp(2.25rem, 10.5vw, 3.35rem); }
