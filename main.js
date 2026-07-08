@@ -75,6 +75,18 @@ nodes.forEach(node => {
 });
 document.title = [...textFixes].reduce((value, [broken, replacement]) => value.split(broken).join(replacement), document.title);
 
+// Floating WhatsApp shortcut across all pages.
+if (!document.querySelector('.floating-whatsapp')) {
+  const floatingWhatsApp = document.createElement('a');
+  floatingWhatsApp.href = 'https://wa.link/q0jb32';
+  floatingWhatsApp.className = 'floating-whatsapp';
+  floatingWhatsApp.target = '_blank';
+  floatingWhatsApp.rel = 'noopener';
+  floatingWhatsApp.setAttribute('aria-label', 'Chat on WhatsApp');
+  floatingWhatsApp.innerHTML = '<img src="WhatsApp_icon.png" alt="" />';
+  document.body.appendChild(floatingWhatsApp);
+}
+
 // Progressive reveal, with a no-JS-safe default in CSS.
 const revealTargets = document.querySelectorAll(
   '.why-card, .service-card, .svc-full-card, .adv-card, .leader-card, .industry-card, .number-card, .mv-card, .step, .contact-card'
@@ -97,11 +109,47 @@ if ('IntersectionObserver' in window) {
 }
 
 function handleFormSubmit(btn) {
-  btn.textContent = 'Sending…';
+  const fields = {
+    name: document.getElementById('contact-name'),
+    company: document.getElementById('contact-company'),
+    email: document.getElementById('contact-email'),
+    phone: document.getElementById('contact-phone'),
+    service: document.getElementById('contact-service'),
+    message: document.getElementById('contact-message')
+  };
+
+  const requiredFields = [fields.name, fields.email, fields.phone, fields.service, fields.message];
+  const firstInvalid = requiredFields.find((field) => field && !field.checkValidity());
+  if (firstInvalid) {
+    firstInvalid.reportValidity();
+    return;
+  }
+
+  const text = [
+    'Hello Genetic Callnet,',
+    '',
+    'I would like to discuss a hiring requirement.',
+    '',
+    `Name: ${fields.name.value.trim()}`,
+    `Company: ${fields.company.value.trim() || 'Not provided'}`,
+    `Email: ${fields.email.value.trim()}`,
+    `Phone: ${fields.phone.value.trim()}`,
+    `Service Needed: ${fields.service.value}`,
+    '',
+    `Message: ${fields.message.value.trim()}`
+  ].join('\n');
+
+  btn.textContent = 'Opening WhatsApp…';
   btn.disabled = true;
+  window.open(`https://wa.me/919833936564?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
+
   setTimeout(() => {
-    btn.style.display = 'none';
+    btn.textContent = 'Send Message →';
+    btn.disabled = false;
     const msg = document.getElementById('form-success');
-    if (msg) msg.style.display = 'block';
-  }, 900);
+    if (msg) {
+      msg.textContent = '✅ WhatsApp opened with your message. Please tap send to complete.';
+      msg.style.display = 'block';
+    }
+  }, 600);
 }

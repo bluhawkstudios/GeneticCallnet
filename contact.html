@@ -16,7 +16,7 @@
         <li class="nav-item" id="about-dropdown">
           <button class="dropdown-toggle">About</button>
           <div class="dropdown-menu">
-            <a href="about.html">About Genetic Callnet</a>
+            <a href="about.html">Genetic Callnet</a>
             <a href="leadership.html">Leadership Team</a>
           </div>
         </li>
@@ -31,7 +31,6 @@
   <section class="page-hero">
     <div class="page-hero-bg"></div>
     <div class="container">
-      <p class="hero-eyebrow">Reach Out</p>
       <h1>Let's Build Your<br/><em>Workforce Together</em></h1>
       <p class="hero-sub" style="max-width:560px">Whether you are hiring at scale, building leadership teams, or seeking specialised talent, Genetic Callnet is ready to support your growth journey.</p>
     </div>
@@ -82,26 +81,26 @@
           <div class="form-row">
             <div class="form-group">
               <label>Your Name</label>
-              <input type="text" placeholder="Full Name" />
+              <input type="text" id="contact-name" placeholder="Full Name" required />
             </div>
             <div class="form-group">
               <label>Company</label>
-              <input type="text" placeholder="Company Name" />
+              <input type="text" id="contact-company" placeholder="Company Name" />
             </div>
           </div>
           <div class="form-row">
             <div class="form-group">
               <label>Email</label>
-              <input type="email" placeholder="work@company.com" />
+              <input type="email" id="contact-email" placeholder="work@company.com" required />
             </div>
             <div class="form-group">
               <label>Phone</label>
-              <input type="tel" placeholder="+91 / +971" />
+              <input type="tel" id="contact-phone" placeholder="+91 / +971" required />
             </div>
           </div>
           <div class="form-group">
             <label>Service Needed</label>
-            <select>
+            <select id="contact-service" required>
               <option value="">Select a Service</option>
               <option>Permanent Recruitment</option>
               <option>RPO</option>
@@ -116,7 +115,7 @@
           </div>
           <div class="form-group">
             <label>Your Message</label>
-            <textarea placeholder="Tell us about your hiring needs, the roles you're looking to fill, or any questions you have..." rows="5"></textarea>
+            <textarea id="contact-message" placeholder="Tell us about your hiring needs, the roles you're looking to fill, or any questions you have..." rows="5" required></textarea>
           </div>
           <button class="btn btn-primary btn-full" onclick="handleFormSubmit(this)">Send Message →</button>
           <p id="form-success" style="display:none;color:#b89400;margin-top:1rem;font-weight:500">✅ Thank you! We'll be in touch shortly.</p>

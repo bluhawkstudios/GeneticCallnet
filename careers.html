@@ -155,7 +155,7 @@
         <li class="nav-item" id="about-dropdown">
           <button class="dropdown-toggle">About</button>
           <div class="dropdown-menu">
-            <a href="about.html">About Genetic Callnet</a>
+            <a href="about.html">Genetic Callnet</a>
             <a href="leadership.html">Leadership Team</a>
           </div>
         </li>
@@ -171,7 +171,6 @@
   <section class="page-hero careers-page-hero">
     <div class="page-hero-bg"></div>
     <div class="container">
-      <p class="hero-eyebrow">Join Our Team</p>
       <h1>Build Your Career at<br/><em>Genetic Callnet</em></h1>
       <p class="hero-sub" style="max-width:580px">We are always looking for passionate, driven individuals who want to make a real difference in how businesses and people connect.</p>
     </div>
@@ -533,12 +532,35 @@
         firstInvalid.reportValidity();
         return;
       }
-      btn.textContent = 'Submitting...';
+      var name = document.getElementById('application-name').value.trim();
+      var mobile = document.getElementById('application-mobile').value.trim();
+      var email = document.getElementById('application-email').value.trim();
+      var resume = document.getElementById('application-resume').files[0];
+      var role = document.getElementById('modal-role-title').textContent.trim();
+      var text = [
+        'Hello Genetic Callnet,',
+        '',
+        'I would like to apply for a role.',
+        '',
+        'Role: ' + role,
+        'Name: ' + name,
+        'Mobile: ' + mobile,
+        'Email: ' + email,
+        'Resume file: ' + (resume ? resume.name : 'Not attached'),
+        '',
+        'Note: I will attach my resume in WhatsApp before sending.'
+      ].join('\n');
+
+      btn.textContent = 'Opening WhatsApp...';
       btn.disabled = true;
-      setTimeout(() => {
-        btn.style.display = 'none';
-        document.getElementById('modal-success').style.display = 'block';
-      }, 1200);
+      window.open('https://wa.me/919833936564?text=' + encodeURIComponent(text), '_blank', 'noopener');
+      setTimeout(function () {
+        btn.textContent = 'Submit Application →';
+        btn.disabled = false;
+        var success = document.getElementById('modal-success');
+        success.textContent = '✅ WhatsApp opened with your application details. Please attach your resume and tap send.';
+        success.style.display = 'block';
+      }, 600);
     }
   </script>
 </body>
