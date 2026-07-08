@@ -218,7 +218,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   overflow: hidden;
   padding: 7.4rem 0 2.25rem;
   background:
-    url('Hero1.png') center center / cover no-repeat;
+    url('Hero1.png') center top / cover no-repeat;
 }
 .hero::before {
   position: absolute;
@@ -965,7 +965,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
     min-height: 470px;
     padding: 7.1rem 0 2.25rem;
     background:
-      url('Hero1.png') center center / cover no-repeat;
+      url('Hero1.png') center top / cover no-repeat;
   }
   .hero::before { inset: 0; opacity: 1; }
   .hero-headline { max-width: 720px; font-size: clamp(2rem, 8vw, 2.75rem); line-height: 1.03; }
