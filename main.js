@@ -91,6 +91,27 @@ if (!document.querySelector('.floating-whatsapp')) {
 const revealTargets = document.querySelectorAll(
   '.why-card, .service-card, .svc-full-card, .adv-card, .leader-card, .industry-card, .number-card, .mv-card, .step, .contact-card'
 );
+function animateCount(el) {
+  if (!el || el.dataset.counted === 'true') return;
+  const end = Number(el.dataset.countTo);
+  if (!Number.isFinite(end)) return;
+  const suffix = el.dataset.countSuffix || '';
+  const duration = end > 1000 ? 1600 : 950;
+  const startTime = performance.now();
+  const format = value => Math.round(value).toLocaleString('en-US') + suffix;
+  el.dataset.counted = 'true';
+
+  function tick(now) {
+    const progress = Math.min((now - startTime) / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    const value = 1 + (end - 1) * eased;
+    el.textContent = format(value);
+    if (progress < 1) requestAnimationFrame(tick);
+    else el.textContent = format(end);
+  }
+
+  requestAnimationFrame(tick);
+}
 if ('IntersectionObserver' in window) {
   revealTargets.forEach(el => {
     el.style.opacity = '0';
@@ -102,6 +123,7 @@ if ('IntersectionObserver' in window) {
       entry.target.style.transition = 'opacity .55s ease, transform .55s ease, border-color .28s ease, box-shadow .28s ease';
       entry.target.style.opacity = '1';
       entry.target.style.transform = 'translateY(0)';
+      entry.target.querySelectorAll('[data-count-to]').forEach(animateCount);
       observer.unobserve(entry.target);
     });
   }, { threshold: .08 });

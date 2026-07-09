@@ -71,7 +71,7 @@ button, input, select, textarea { font: inherit; }
 button, a { -webkit-tap-highlight-color: transparent; }
 
 .container { width: min(1180px, calc(100% - 40px)); margin-inline: auto; }
-.section { padding: clamp(5rem, 9vw, 8.5rem) 0; }
+.section { padding: clamp(3.5rem, 6.5vw, 6rem) 0; }
 .section:nth-of-type(even) { position: relative; }
 .section-sub { max-width: 650px; margin: .85rem 0 2.8rem; font-size: 1.08rem; }
 
@@ -213,12 +213,12 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .hero {
   position: relative;
   display: flex;
-  min-height: 430px;
+  min-height: 600px;
   align-items: center;
   overflow: hidden;
-  padding: 7.4rem 0 2.25rem;
+  padding: 8.2rem 0 3.2rem;
   background:
-    url('Hero1.png') center top / cover no-repeat;
+    url('GoldBG.png') center center / cover no-repeat;
 }
 .hero::before {
   position: absolute;
@@ -397,7 +397,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   max-width: 760px;
 }
 .about-story-section {
-  padding-top: clamp(2.25rem, 4vw, 3.5rem);
+  padding-top: clamp(1.65rem, 3vw, 2.6rem);
 }
 .about-story-copy h2 {
   max-width: 680px;
@@ -536,7 +536,38 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 .process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
 .step { position: relative; min-height: 230px; padding: 1.7rem; }
-.step-num, .adv-num { display: block; margin-bottom: 3.2rem; color: var(--olive-deep); font-family: var(--font-display); font-size: .78rem; font-weight: 800; letter-spacing: .12em; }
+.adv-num { display: block; margin-bottom: 3.2rem; color: var(--olive-deep); font-family: var(--font-display); font-size: .78rem; font-weight: 800; letter-spacing: .12em; }
+.step-num {
+  position: relative;
+  display: grid;
+  width: 52px;
+  height: 52px;
+  place-items: center;
+  margin-bottom: 3rem;
+  border-radius: 16px;
+  color: var(--ink);
+  background: var(--yellow-soft);
+}
+.step-num::after {
+  width: 24px;
+  height: 24px;
+  content: '';
+  background: currentColor;
+  mask: var(--step-icon) center / contain no-repeat;
+  -webkit-mask: var(--step-icon) center / contain no-repeat;
+}
+.step:nth-of-type(1) .step-num {
+  --step-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.1' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z'/%3E%3Ccircle cx='12' cy='12' r='3'/%3E%3C/svg%3E");
+}
+.step:nth-of-type(3) .step-num {
+  --step-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.1' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='m20 20-4-4M11 8v6M8 11h6'/%3E%3C/svg%3E");
+}
+.step:nth-of-type(5) .step-num {
+  --step-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.1' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='7' y='7' width='10' height='10' rx='2'/%3E%3Cpath d='M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3M10 14l1-4h2l1 4M10.4 12.7h3.2'/%3E%3C/svg%3E");
+}
+.step:nth-of-type(7) .step-num {
+  --step-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.1' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 7 9 18l-5-5'/%3E%3Cpath d='M14 7h6v6'/%3E%3C/svg%3E");
+}
 .step h4 { margin-bottom: .7rem; }
 .step p { font-size: .9rem; }
 .step-arrow { display: none; }
@@ -940,7 +971,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 @media (max-width: 760px) {
   .container, .hero-content, .nav-inner { width: min(100% - 28px, 1180px); }
-  .section { padding: 4.5rem 0; }
+  .section { padding: 3.4rem 0; }
   .nav-inner { height: 72px; }
   .logo-img { height: 40px; }
   .hamburger { display: flex; }
@@ -962,10 +993,10 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .nav-links .nav-cta { margin: .6rem 0 0; justify-content: center; }
   .dropdown-menu { position: static; margin-top: .3rem; border: 0; background: var(--canvas); box-shadow: none; }
   .hero {
-    min-height: 470px;
-    padding: 7.1rem 0 2.25rem;
+    min-height: 655px;
+    padding: 7.8rem 0 3rem;
     background:
-      url('Hero1.png') center top / cover no-repeat;
+      url('GoldBG.png') center center / cover no-repeat;
   }
   .hero::before { inset: 0; opacity: 1; }
   .hero-headline { max-width: 720px; font-size: clamp(2rem, 8vw, 2.75rem); line-height: 1.03; }
