@@ -3,8 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore current recruitment opportunities at Genetic Callnet and join a team building stronger businesses through talent across India, the UAE, and global markets." />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://www.geneticcallnet.com/careers.html" />
+  <meta property="og:title" content="Careers at Genetic Callnet | Current Openings" />
+  <meta property="og:description" content="View current openings and build your career with Genetic Callnet, a global recruitment and workforce solutions partner." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.geneticcallnet.com/careers.html" />
+  <meta property="og:image" content="https://www.geneticcallnet.com/WORLDMAPGOLD.png" />
+  <meta name="twitter:card" content="summary_large_image" />
   <title>Careers – Genetic Callnet</title>
   <link rel="stylesheet" href="style.css" />
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebPage",
+    "url":"https://www.geneticcallnet.com/careers.html",
+    "name":"Careers at Genetic Callnet",
+    "description":"Current career opportunities at Genetic Callnet.",
+    "about":{"@id":"https://www.geneticcallnet.com/#organization"}
+  }
+  </script>
   <style>
     .careers-intro { max-width: 700px; }
     .careers-intro p { font-size: 1.05rem; line-height: 1.85; margin-top: 0.8rem; }
@@ -176,7 +195,7 @@
     </div>
   </section>
 
-  <!-- OPEN POSITIONS (Live from iSmartRecruit ATS) -->
+  <!-- OPEN POSITIONS (Live from CEIPAL) -->
   <section class="section careers-openings-section">
     <div class="container">
       <span class="tag">Open Positions</span>
@@ -185,103 +204,22 @@
           <h2>Current Openings</h2>
           <p class="section-sub">Explore live opportunities across our India and UAE offices.</p>
         </div>
-        <div class="open-app-cta">
-          <span class="open-app-prompt">Don't see the right role?</span>
-          <a
-            href="#application-modal"
-            class="btn btn-primary"
-            id="open-application-btn"
-            role="button"
-            onclick="document.getElementById('modal-role-title').textContent='General / Open Application';document.getElementById('application-modal').classList.add('open');document.body.style.overflow='hidden';return false;"
-          >Send Your Profile →</a>
-        </div>
       </div>
 
-      <div class="ats-widget-wrap">
-        <div class="ats-search-shell">
-          <div class="ats-search-row">
-              <div class="ats-search-field">
-                <input type="text" placeholder="Enter text to filter" id="textbox_id" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all">
-              </div>
-              <div class="ats-search-action">
-                <button class="btn btn-default" onclick="parameter()" style="height: 35px;width: 50px;box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.08);">
-                  <i class="ui-icon-search" style="font-size: 18px;color: #c6c6c6;"></i>
-                </button>
-              </div>
-          </div>
-        </div>
-        <div id="myFirstWidget"></div>
+      <div class="ceipal-widget-wrap">
+        <div id="example-widget-container"></div>
       </div>
 
     </div>
   </section>
 
-  <!-- iSmartRecruit ATS Widget Assets -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <link type="text/css" rel="stylesheet" href="https://app.ismartrecruit.com/javax.faces.resource/theme.css.xhtml?ln=primefaces-sam" />
-  <link type="text/css" rel="stylesheet" href="https://app.ismartrecruit.com/javax.faces.resource/fa/font-awesome.css.xhtml" />
-  <link type="text/css" rel="stylesheet" href="https://app.ismartrecruit.com/javax.faces.resource/font-awesome.css.xhtml?ln=css" />
-  <link type="text/css" rel="stylesheet" href="https://app.ismartrecruit.com/javax.faces.resource/ik.css.xhtml?ln=css" />
-  <link type="text/css" rel="stylesheet" href="https://app.ismartrecruit.com/javax.faces.resource/components.css.xhtml?ln=primefaces&amp;v=6.1" />
-  <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
-  <script type="text/javascript" src="https://app.ismartrecruit.com/javax.faces.resource/core.js.xhtml"></script>
-  <script type="text/javascript" src="https://app.ismartrecruit.com/javax.faces.resource/components.js.xhtml"></script>
-  <script type="text/javascript">
-    var str = " ";
-    var test2 = "https://app.ismartrecruit.com/openJobWebsite?tenantId=E7pZ2VuZXRpY2NhbGxuZXQuY29tX2lqVnpscVpWemkQ9e&view=grid&col=2&lang=en";
-    function parameter() {
-      str = document.getElementById('textbox_id').value;
-      str = str.replaceAll(" ", "00000");
-      test2 = "https://app.ismartrecruit.com/openJobWebsite?tenantId=E7pZ2VuZXRpY2NhbGxuZXQuY29tX2lqVnpscVpWemkQ9e&view=grid&col=2&lang=en&filterPara=" + str;
-      $("#myFirstWidget").load(test2);
-    }
-    String.prototype.replaceAll = function(target, replacement) {
-      return this.split(target).join(replacement);
-    };
-  </script>
-  <script type="text/javascript" src="https://app.ismartrecruit.com/js/applyNowWebsite.js"></script>
-  <script type="text/javascript">
-    var wage = document.getElementById("textbox_id");
-    wage.addEventListener("keydown", function (e) {
-      if (e.keyCode === 13) { parameter(); }
-    });
-  </script>
+  <!-- CEIPAL career portal widget -->
+  <script type="text/javascript" src="https://jobsapi.ceipal.com/APISource/widget.js" data-ceipal-api-key="UlpOTlZNU1RjbnFleVprRmdzSEZyUT09" data-ceipal-career-portal-id="Z3RkUkt2OXZJVld2MjFpOVRSTXoxZz09"></script>
+
   <script type="text/javascript">
     // Strip any inline blue background/hover styles the ATS widget injects,
     // so our CSS override always wins — runs once on load and again after
     // any search-filter reload.
-    function cleanAtsWidgetStyles() {
-      var widget = document.getElementById('myFirstWidget');
-      if (!widget) return;
-      widget.querySelectorAll('.ui-datagrid-column').forEach(function (col) {
-        col.style.removeProperty('background');
-        col.style.removeProperty('background-color');
-      });
-    }
-    var atsWidgetObserver = new MutationObserver(cleanAtsWidgetStyles);
-    var atsWidgetTarget = document.getElementById('myFirstWidget');
-    if (atsWidgetTarget) {
-      atsWidgetObserver.observe(atsWidgetTarget, { childList: true, subtree: true });
-    }
-    window.addEventListener('load', cleanAtsWidgetStyles);
-  </script>
-  <script type="text/javascript">
-    // If arriving from the homepage search bar with a ?filterPara= value,
-    // pre-fill the search box and auto-run the same filter the ATS widget uses.
-    (function () {
-      var urlParams = new URLSearchParams(window.location.search);
-      var incomingFilter = urlParams.get('filterPara');
-      if (incomingFilter) {
-        var displayValue = incomingFilter.replace(/00000/g, ' ');
-        var inputEl = document.getElementById('textbox_id');
-        if (inputEl) {
-          inputEl.value = displayValue;
-        }
-        str = incomingFilter;
-        test2 = "https://app.ismartrecruit.com/openJobWebsite?tenantId=E7pZ2VuZXRpY2NhbGxuZXQuY29tX2lqVnpscVpWemkQ9e&view=grid&col=2&lang=en&filterPara=" + incomingFilter;
-        $("#myFirstWidget").load(test2, cleanAtsWidgetStyles);
-      }
-    })();
   </script>
   <style>
     /* Override iSmartRecruit's default blue hover with our brand colour */
@@ -431,6 +369,30 @@
         width: 100% !important;
         padding: 7px !important;
       }
+    }
+
+    /* CEIPAL widget frame */
+    .ceipal-widget-wrap {
+      margin-top: 2rem;
+      min-height: 420px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--canvas);
+    }
+    #example-widget-container {
+      width: 100%;
+      min-height: 420px;
+      box-sizing: border-box;
+    }
+    .ceipal-widget-wrap input,
+    .ceipal-widget-wrap button,
+    .ceipal-widget-wrap select,
+    .ceipal-widget-wrap textarea {
+      font-family: var(--font-main) !important;
+    }
+    @media (max-width: 640px) {
+      .ceipal-widget-wrap { margin-top: 1.25rem; border-radius: 18px; }
     }
   </style>
 
