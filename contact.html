@@ -77,7 +77,41 @@
       <div class="contact-form-col">
         <span class="tag">Send a Message</span>
         <h2>Speak to Our Team Today</h2>
-        <div class="contact-form">
+        <form class="contact-form google-submission-form" action="https://docs.google.com/forms/d/e/1FAIpQLSe72ptVBBuzvmOgkGl2XfKr7AvhUFFul5BnNWyT8NK-lw9Vfg/formResponse" method="post" target="google-form-submit" onsubmit="return handleGoogleFormSubmit(this)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="google-name">Your Name</label>
+              <input id="google-name" name="entry.2064713838" type="text" placeholder="Full Name" autocomplete="name" required />
+            </div>
+            <div class="form-group">
+              <label for="google-company">Company</label>
+              <input id="google-company" name="entry.1839587525" type="text" placeholder="Company Name" autocomplete="organization" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="google-email">Email</label>
+              <input id="google-email" name="entry.2058367858" type="email" placeholder="work@company.com" autocomplete="email" required />
+            </div>
+            <div class="form-group">
+              <label for="google-phone">Phone</label>
+              <input id="google-phone" name="entry.320408840" type="tel" placeholder="+91 / +971" autocomplete="tel" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="google-service">Service Needed</label>
+            <input id="google-service" name="entry.2131052070" type="text" placeholder="Which service do you need?" required />
+          </div>
+          <div class="form-group">
+            <label for="google-message">Your Message</label>
+            <textarea id="google-message" name="entry.514212636" placeholder="Tell us about your hiring needs..." rows="5" required></textarea>
+          </div>
+          <button class="btn btn-primary btn-full" type="submit">Send Message →</button>
+          <p class="google-form-success" aria-live="polite" hidden>Thank you — your message has been submitted.</p>
+        </form>
+        <iframe name="google-form-submit" class="google-form-submit-frame" title="Google Form submission" aria-hidden="true"></iframe>
+        <div class="contact-form legacy-contact-form">
+          <iframe class="google-form-frame" src="https://docs.google.com/forms/d/e/1FAIpQLSe72ptVBBuzvmOgkGl2XfKr7AvhUFFul5BnNWyT8NK-lw9Vfg/viewform?embedded=true" title="Contact Genetic Callnet" loading="lazy"></iframe>
           <div class="form-row">
             <div class="form-group">
               <label>Your Name</label>
@@ -104,7 +138,7 @@
               <option value="">Select a Service</option>
               <option>Permanent Recruitment</option>
               <option>RPO</option>
-              <option>Resource Augmentation</option>
+              <option>Contract Staffing</option>
               <option>Executive Search</option>
               <option>Global Recruitment</option>
               <option>Recruitment Research Advisory</option>
@@ -141,6 +175,17 @@
     </div>
     <div class="footer-bottom"><p>© 2026 Genetic Callnet. All rights reserved.</p></div>
   </footer>
+  <script>
+    function handleGoogleFormSubmit(form) {
+      const button = form.querySelector('button[type="submit"]');
+      const success = form.querySelector('.google-form-success');
+      button.disabled = true;
+      button.textContent = 'Message Sent ✓';
+      success.hidden = false;
+      window.setTimeout(() => form.reset(), 900);
+      return true;
+    }
+  </script>
   <script src="main.js"></script>
 </body>
 </html>
